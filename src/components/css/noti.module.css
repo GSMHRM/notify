@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+body {
+  background-color: #d9d9d9;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  position: absolute;
+  width: 23.5%;
+  height: 85%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+.incontainer {
+  position: absolute;
+  color: #fff;
+  width: 20.5%;
+  height: 78%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+}
+
+.incontainer p {
+  margin: 10px;
+  font-weight: 700;
+}
+
+.incontainer .day {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.incontainer .main{
+  margin-top: 30%;
+  margin-left: 3%;
+}
+
+.incontainer .main .nowweather{
+  font-size: 1.3rem;
+}
+
+.incontainer .main hr{
+  width: 93%;
+  border: 0px;
+  height: 1px;
+  background-color: #fff;
+}
+.incontainer button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 4%;
+}
+.incontainer button:focus{
+  outline: none;
+  border: none;
+}
