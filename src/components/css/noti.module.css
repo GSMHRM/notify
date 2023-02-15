@@ -73,7 +73,10 @@ body {
 .incontainer button:focus{
   outline: none;
   border: none;
-  color: pink;
+}
+.incontainer button:hover{
+  font-size: 1.4rem;
+  color: #f3470e;
 }
 .incontainer .prebutton{
   position: fixed;

@@ -26,7 +26,7 @@ export default function HanGang() {
 
   return (
     <>
-    <img src={Background} alt="한강" className={hangang.back__img}/>
+    <img src={Background} alt="한강" className={Hangang.back__img}/>
       <div className={Hangang.container}>
         <img src={Background} alt="한강" className={Hangang.img} />
       </div>

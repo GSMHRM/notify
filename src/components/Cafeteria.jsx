@@ -17,7 +17,7 @@ const SCHOOL_CODE = "7380292";
 const SC_CODE = "F10";
 let TODAY = year + month + date;
 
-const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${SC_CODE}&SD_SCHUL_CODE=${SCHOOL_CODE}&MLSV_YMD=${TODAY}`;
+const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${SC_CODE}&SD_SCHUL_CODE=${SCHOOL_CODE}&MLSV_YMD=20230302`;
 const Cafeteria = () => {
   const [eat, setEat] = useState("");
   const [rownum, setRownum] = useState(0);
