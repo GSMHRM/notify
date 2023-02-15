@@ -1,0 +1,58 @@
+body {
+    background-color: #d9d9d9;
+  }
+  .container {
+    position: absolute;
+    width: 23.5%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+  }
+  .incontainer {
+    position: absolute;
+    color: #fff;
+    width: 20.5%;
+    height: 78%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .incontainer p {
+    margin: 10px;
+  }
+  
+  .incontainer .day {
+    font-size: 1.3rem;
+  }
+  
+  .incontainer .main{
+    margin-top: 30%;
+    margin-left: 3%;
+  }
+  
+  .incontainer .main .nowweather{
+    font-size: 1.3rem;
+  }
+  
+  .incontainer .main hr{
+    width: 93%;
+    border: 0px;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  .temp {
+   margin: 0;
+    font-size: 2.5rem;
+  }
