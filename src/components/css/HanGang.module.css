@@ -59,16 +59,16 @@ body {
     font-size: 2rem;
   }
   .incontainer .prebutton{
-    position: relative;
+    position: fixed;
     color: #fff;
     text-decoration: none;
     left: 98%;
-    bottom: 10%;
+    bottom: 52.3%;
   }
   .incontainer .backbutton{
-    position: relative;
+    position: fixed;
     color: #fff;
     text-decoration: none;
-    left:-10%;
-    bottom: 10%;
+    left:-4%;
+    bottom: 52.3%;
   }

@@ -56,16 +56,16 @@ body {
   width: 93%;
 }
 .in__container .prebutton{
-  position: relative;
+  position: fixed;
   color: #fff;
   text-decoration: none;
   left: 98%;
-  bottom: 10%;
+  bottom: 52.3%;
 }
 .in__container .backbutton{
-  position: relative;
+  position: fixed;
   color: #fff;
   text-decoration: none;
-  left:-10%;
-  bottom: 10%;
+  left:-4%;
+  bottom: 52.3%;
 }
