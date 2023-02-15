@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./css/fidust.module.css";
-import Background from "./img/dust.png";
+import Background from "./img/dust.jpg";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
