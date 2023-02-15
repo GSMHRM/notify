@@ -27,6 +27,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
+  font-weight: 700;
 }
 
 .incontainer p {
@@ -66,4 +67,18 @@ body {
 .incontainer button:focus{
   outline: none;
   border: none;
+}
+.incontainer .prebutton{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  left: 98%;
+  bottom: 38.3%;
+}
+.incontainer .backbutton{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  left:-4%;
+  bottom: 9%;
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Hangang from "./css/HanGang.module.css";
 import Background from "./img/hangang.jpg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function HanGang(){
 
@@ -16,10 +17,10 @@ export default function HanGang(){
     let time = "";
     const [hangang,setHangang]=useState([{"time":"00:00","temp":"0.0"}]);
     const URL = `https://api.qwer.pw/request/hangang_temp?apikey=guest`;
-
+    
     useEffect(()=>{
-         axios.get(URL)
-        .then((res)=>{
+      axios.get(URL)
+      .then((res)=>{
            console.log(res.data[1].respond);
            setHangang(res.data[1].respond);
         })
@@ -47,7 +48,8 @@ export default function HanGang(){
           <hr></hr>
           <p className={Hangang.temp}>{hangang.temp}°C</p>
         </div>
-        
+        <Link to={`/finedust`} className={Hangang.prebutton}>{">"}</Link>
+        <Link to={`/`} className={Hangang.backbutton}>{"<"}</Link>
       </div>
     </>
     );

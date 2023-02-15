@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
 body {
     background-color: #d9d9d9;
+    font-family: "Inter", sans-serif;
   }
   .container {
     position: absolute;
@@ -25,7 +27,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.8rem;
-    font-weight: bold;
+    font-weight: 700;
   }
   
   .incontainer p {
@@ -54,5 +56,19 @@ body {
 
   .temp {
    margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  .incontainer .prebutton{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    left: 98%;
+    bottom: 10%;
+  }
+  .incontainer .backbutton{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    left:-10%;
+    bottom: 10%;
   }

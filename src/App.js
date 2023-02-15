@@ -2,13 +2,22 @@ import Cafeteria from "./components/Cafeteria";
 import Weather from "./components/Weather";
 import FiDust from "./components/FiDust";
 import HanGang from "./components/HanGang";
-import appcss from "./components/css/app.module.css";
+import React from "react";
+import styled from "styled-components";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Routes } from "react-router";
+
 
 function App() {
   return (
-    <>
-      <HanGang />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Cafeteria />} />
+        <Route path="/hangang" element={<HanGang />} />
+        <Route path="/finedust" element={<FiDust />} />
+        <Route path="/weather" element={<Weather />} />
+      </Routes>
+    </Router>
   );
 }
 

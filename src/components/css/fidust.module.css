@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
 body {
   background-color: #d9d9d9;
+  font-family: "Inter", sans-serif;
 }
 
 .img__container {
@@ -27,7 +29,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .in__container p{
@@ -40,7 +42,7 @@ body {
 
 .in__container .main{
   margin-top: 30%;
-  margin-left: 3px;
+  margin-left: 3%;
 }
 
 .in__container .main .now__dust{
@@ -52,4 +54,18 @@ body {
   border: 0px;
   height: 1px;
   width: 93%;
+}
+.in__container .prebutton{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  left: 98%;
+  bottom: 10%;
+}
+.in__container .backbutton{
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  left:-10%;
+  bottom: 10%;
 }

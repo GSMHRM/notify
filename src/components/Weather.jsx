@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Background from "./img/weather.jpg";
 import weathercss from "./css/noti.module.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
 
@@ -140,6 +141,7 @@ const Weather = () => {
           <hr></hr>
           <p style={{fontSize:"1.5rem"}}>{weather}</p>
         </div>
+        <Link to={`/finedust`} className={weathercss.backbutton}>{"<"}</Link>
       </div>
     </>
   );

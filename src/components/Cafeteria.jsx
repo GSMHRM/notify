@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import cafe from "./css/noti.module.css";
 import cafeteriaimg from "./img/cafeteria.jpg";
 
@@ -54,14 +55,33 @@ const Cafeteria = () => {
         <div className={cafe.main}>
           <p className={cafe.nowweather}>오늘 급식은</p>
           <hr></hr>
-          <button onClick={() => {setRownum(0)}}>조식</button>
-          <button onClick={() => {setRownum(1)}}>중식</button>
-          <button onClick={() => {setRownum(2)}}>석식</button>
+          <button
+            onClick={() => {
+              setRownum(0);
+            }}
+          >
+            조식
+          </button>
+          <button
+            onClick={() => {
+              setRownum(1);
+            }}
+          >
+            중식
+          </button>
+          <button
+            onClick={() => {
+              setRownum(2);
+            }}
+          >
+            석식
+          </button>
           <p
             style={{ fontSize: "1rem" }}
             dangerouslySetInnerHTML={{ __html: replaceWithBr() }}
           />
         </div>
+        <Link to={`/hangang`} className={cafe.prebutton}>{">"}</Link>
       </div>
     </>
   );
