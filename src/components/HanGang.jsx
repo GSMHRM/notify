@@ -15,14 +15,13 @@ export default function HanGang(){
     
     let time = "";
     const [hangang,setHangang]=useState([{"time":"00:00","temp":"0.0"}]);
-    const URL = `https://cors-anywhere.herokuapp.com/https://api.hangang.msub.kr/`;
+    const URL = `https://api.qwer.pw/request/hangang_temp?apikey=guest`;
 
     useEffect(()=>{
          axios.get(URL)
         .then((res)=>{
-           setHangang(res.data);
-           console.log(res.data);
-         
+           console.log(res.data[1].respond);
+           setHangang(res.data[1].respond);
         })
     },[])
     
