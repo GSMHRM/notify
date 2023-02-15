@@ -29,6 +29,7 @@ function SmDust() {
 
   return (
     <div>
+      <img src={Background} alt="미세먼지" className={styles.back__img}/>
       <div className={styles.img__container}>
         <img src={Background} alt="미세먼지" className={styles.img} />
       </div>

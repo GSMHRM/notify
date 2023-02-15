@@ -124,6 +124,7 @@ const Weather = () => {
 
   return (
     <>
+    <img src={Background} alt="미세먼지" className={weathercss.back__img}/>
       <div className={weathercss.container}>
         <img src={Background} alt="날씨" className={weathercss.img} />
       </div>

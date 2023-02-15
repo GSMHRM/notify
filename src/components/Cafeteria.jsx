@@ -40,6 +40,7 @@ const Cafeteria = () => {
 
   return (
     <>
+    <img src={cafeteriaimg} alt="미세먼지" className={cafe.back__img}/>
       <div className={cafe.container}>
         <img src={cafeteriaimg} alt="날씨" className={cafe.img} />
       </div>
