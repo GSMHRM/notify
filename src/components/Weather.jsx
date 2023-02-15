@@ -139,7 +139,7 @@ const Weather = () => {
         <div className={weathercss.main}>
           <p className={weathercss.nowweather}>오늘 날씨는</p>
           <hr></hr>
-          <p style={{fontSize:"1.5rem"}}>{weather}</p>
+          <p style={{fontSize:"1.3rem"}}>{weather}</p>
         </div>
         <Link to={`/finedust`} className={weathercss.backbutton}>{"<"}</Link>
       </div>
