@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Hangang from "../style/HanGang.module.css";
-import Background from "../image/hangang.jpg";
+import Hangang from "./css/HanGang.module.css";
+import Background from "./img/hangang.jpg";
 import axios from "axios";
+
 export default function HanGang(){
 
     let today = new Date();
@@ -14,8 +15,7 @@ export default function HanGang(){
     
     let time = "";
     const [hangang,setHangang]=useState([{"time":"00:00","temp":"0.0"}]);
-    const URL = `https://api.hangang.msub.kr/`;
-
+    const URL = `https://cors-anywhere.herokuapp.com/https://api.hangang.msub.kr/`;
 
     useEffect(()=>{
          axios.get(URL)

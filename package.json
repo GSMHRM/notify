@@ -22,7 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://api.openweathermap.org/data/2.5/weather",
   "eslintConfig": {
     "extends": [
       "react-app",

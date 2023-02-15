@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import styles from "../styles/fidust.module.css";
-import Background from "../img/dust.png";
+import styles from "./css/fidust.module.css";
+import Background from "./img/dust.png";
 import axios from 'axios';
 
 function SmDust() {
