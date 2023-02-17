@@ -13,11 +13,11 @@ let day = today.getDay(); // 요일
 let dayName = week[today.getDay()];
 
 const API_KEY = "eec42ae7144a47898d823c55a82a1729";
-const SCHOOL_CODE = "7380292";
-const SC_CODE = "F10";
+const ATPT_OFCDC_SC_CODE = "F10";
+const SD_SCHUL_CODE = "7380292";
 let TODAY = year + month + date;
 
-const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${SC_CODE}&SD_SCHUL_CODE=${SCHOOL_CODE}&MLSV_YMD=${TODAY}`;
+const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&MLSV_YMD=${TODAY}`;
 const Cafeteria = () => {
   const [eat, setEat] = useState("");
   const [rownum, setRownum] = useState(0);
@@ -40,7 +40,7 @@ const Cafeteria = () => {
 
   return (
     <>
-    <img src={cafeteriaimg} alt="미세먼지" className={cafe.back__img}/>
+      <img src={cafeteriaimg} alt="미세먼지" className={cafe.back__img} />
       <div className={cafe.container}>
         <img src={cafeteriaimg} alt="날씨" className={cafe.img} />
       </div>
@@ -82,7 +82,9 @@ const Cafeteria = () => {
             dangerouslySetInnerHTML={{ __html: replaceWithBr() }}
           />
         </div>
-        <Link to={`/hangang`} className={cafe.prebutton}>{">"}</Link>
+        <Link to={`/academiccalendar`} className={cafe.prebutton}>
+          {">"}
+        </Link>
       </div>
     </>
   );

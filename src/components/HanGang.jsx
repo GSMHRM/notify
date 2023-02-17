@@ -49,7 +49,7 @@ export default function HanGang() {
         <Link to={`/finedust`} className={Hangang.prebutton}>
           {">"}
         </Link>
-        <Link to={`/`} className={Hangang.backbutton}>
+        <Link to={`/academiccalendar`} className={Hangang.backbutton}>
           {"<"}
         </Link>
       </div>
