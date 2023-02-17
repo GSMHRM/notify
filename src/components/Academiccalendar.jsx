@@ -17,7 +17,7 @@ const ATPT_OFCDC_SC_CODE = "F10";
 const SD_SCHUL_CODE = "7380292";
 let TODAY = year + month;
 
-const URL = `	https://open.neis.go.kr/hub/SchoolSchedule?Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&AA_YMD=${TODAY}`;
+const URL = `	https://open.neis.go.kr/hub/SchoolSchedule?KEY=${API_KEY}&Type=json&pIndex=1&pSize=100&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&AA_YMD=${TODAY}`;
 
 const Academiccalendar = () => {
   const [data, setData] = useState([]);
@@ -46,8 +46,8 @@ const Academiccalendar = () => {
           <p className={styles.now__dust}>이번달 학사 일정은</p>
           <hr />
           {data.map((eventnm, index) => (
-            <p key={index} style={{ fontSize: "1rem" }}>
-              {eventnm.EVENT_NM}({eventnm.AA_YMD})
+            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%" }}>
+              {eventnm.EVENT_NM} ({eventnm.AA_YMD})
             </p>
           ))}
         </div>
