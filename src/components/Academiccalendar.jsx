@@ -46,7 +46,7 @@ const Academiccalendar = () => {
           <p className={styles.now__dust}>이번달 학사 일정은</p>
           <hr />
           {data.map((eventnm, index) => (
-            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%" }}>
+            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%", marginRight:"1%" }}>
               {eventnm.EVENT_NM} ({eventnm.AA_YMD})
             </p>
           ))}
