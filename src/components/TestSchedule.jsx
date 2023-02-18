@@ -14,7 +14,7 @@ let dayName = week[today.getDay()];
 
 const API_KEY =
   "SmhbNZHl1Nogk0i9B2hiUjvqkJxPKYbROW789SRPplSUfeNFWQUyJ0IUplBaZXtKgO3Gt37CrKnUEcVmc2aVUg%3D%3D";
-const URL = `http://apis.data.go.kr/B490007/qualExamSchd/getQualExamSchdList?dataFormat=json&serviceKey=${API_KEY}&implYy=${year}&numOfRows=10&pageNo=1&qualgbCd=T&jmCd=6921`;
+const URL = `https://apis.data.go.kr/B490007/qualExamSchd/getQualExamSchdList?dataFormat=json&serviceKey=${API_KEY}&implYy=${year}&numOfRows=10&pageNo=1&qualgbCd=T&jmCd=6921`;
 
 const TestSchedule = () => {
   const [testdata, setTestdata] = useState([]);
