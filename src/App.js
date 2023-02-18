@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Routes } from "react-router";
 import Academiccalendar from "./components/Academiccalendar";
+import TestSchedule from "./components/TestSchedule";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Cafeteria />} />
         <Route path="/academiccalendar" element={<Academiccalendar />} />
+        <Route path="testschedule" element={<TestSchedule/>} />
         <Route path="/hangang" element={<HanGang />} />
         <Route path="/finedust" element={<FiDust />} />
         <Route path="/weather" element={<Weather />} />

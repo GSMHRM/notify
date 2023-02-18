@@ -46,12 +46,12 @@ const Academiccalendar = () => {
           <p className={styles.now__dust}>이번달 학사 일정은</p>
           <hr />
           {data.map((eventnm, index) => (
-            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%", marginRight:"1%" }}>
+            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%", marginLeft:"3%" }}>
               {eventnm.EVENT_NM} ({eventnm.AA_YMD})
             </p>
           ))}
         </div>
-        <Link to={`/hangang`} className={styles.prebutton}>
+        <Link to={`/testschedule`} className={styles.prebutton}>
           {">"}
         </Link>
         <Link to={`/`} className={styles.backbutton}>
