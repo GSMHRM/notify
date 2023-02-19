@@ -49,11 +49,11 @@ const TestSchedule = () => {
           {testdata.map((info, index) => (
             <p key={index} style={{ fontSize: "0.7rem" }}>
               {info.description.substring(12,22)}<br/>
-              필기 신청 : {info.docRegStartDt}~{info.docRegEndDt}
+              필기 신청일 : {info.docRegStartDt}~{info.docRegEndDt}
               <br />
-              실기 신청 : {info.pracRegStartDt}~{info.pracRegEndDt}
+              실기 신청일 : {info.pracRegStartDt}~{info.pracRegEndDt}
               <br />
-              합격자 발표 : {info.pracPassDt}
+              합격자 발표일 : {info.pracPassDt}
             </p>
           ))}
         </div>
