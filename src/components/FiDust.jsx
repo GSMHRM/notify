@@ -13,8 +13,9 @@ function SmDust() {
   let day = today.getDay(); // 요일
   let dayName = week[today.getDay()];
   const [data, setData] = useState([]);
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  const URL = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=SmhbNZHl1Nogk0i9B2hiUjvqkJxPKYbROW789SRPplSUfeNFWQUyJ0IUplBaZXtKgO3Gt37CrKnUEcVmc2aVUg%3D%3D&returnType=json&numOfRows=100&pageNo=1&sidoName=%EA%B4%91%EC%A3%BC&ver=1.0`;
+  const API_KEY = process.env.REACT_APP_FIDUST;
+  const SIDO_NANE = process.env.REACT_APP_SIDO;
+  const URL = `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=${API_KEY}&returnType=json&numOfRows=100&pageNo=1&sidoName=${SIDO_NANE}&ver=1.0`;
 
   useEffect(() => {
     axios.get(URL).then(

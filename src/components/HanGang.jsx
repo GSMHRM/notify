@@ -15,7 +15,8 @@ export default function HanGang() {
 
   let time = "";
   const [hangang, setHangang] = useState([{ time: "00:00", temp: "0.0" }]);
-  const URL = `https://api.qwer.pw/request/hangang_temp?apikey=guest`;
+  const API_KEY = process.env.REACT_APP_HANGANG;
+  const URL = `https://api.qwer.pw/request/hangang_temp?apikey=${API_KEY}`;
 
   useEffect(() => {
     axios.get(URL).then((res) => {

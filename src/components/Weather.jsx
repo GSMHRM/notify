@@ -99,8 +99,8 @@ const idToss = (w_id) => {
 };
 
 const api = {
-  key: "17fc53abd5de8d1ce2468212ee86d5f0",
-  city: "Gwangju",
+  key: process.env.REACT_APP_WEATHER,
+  city: process.env.REACT_APP_CITY,
 };
 
 const Weather = () => {

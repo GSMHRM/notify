@@ -12,9 +12,9 @@ let week = new Array("일", "월", "화", "수", "목", "금", "토");
 let day = today.getDay(); // 요일
 let dayName = week[today.getDay()];
 
-const API_KEY = "eec42ae7144a47898d823c55a82a1729";
-const ATPT_OFCDC_SC_CODE = "F10";
-const SD_SCHUL_CODE = "7380292";
+const API_KEY = process.env.REACT_APP_NEIS;
+const ATPT_OFCDC_SC_CODE = process.env.REACT_APP_SCCODE;
+const SD_SCHUL_CODE = process.env.REACT_APP_SDCODE;
 let TODAY = year + month + date;
 
 const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&MLSV_YMD=${TODAY}`;
