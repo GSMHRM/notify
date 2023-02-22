@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Background from "./img/testschedule.jpg";
-import weathercss from "./css/noti.module.css";
+import testschedulecss from "./css/noti.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
@@ -30,24 +30,24 @@ const TestSchedule = () => {
 
   return (
     <>
-      <img src={Background} alt="시험험" className={weathercss.back__img} />
-      <div className={weathercss.container}>
-        <img src={Background} alt="시험" className={weathercss.img} />
+      <img src={Background} alt="시험험" className={testschedulecss.back__img} />
+      <div className={testschedulecss.container}>
+        <img src={Background} alt="시험" className={testschedulecss.img} />
       </div>
 
-      <div className={weathercss.incontainer}>
+      <div className={testschedulecss.incontainer}>
         <div>
           <p>
             {year}년 {month}월 {date}일
           </p>
-          <p className={weathercss.day}>{dayName}요일</p>
+          <p className={testschedulecss.day}>{dayName}요일</p>
         </div>
 
-        <div className={weathercss.main}>
-          <p className={weathercss.nowweather}>기능사 시험 일정은</p>
+        <div className={testschedulecss.main}>
+          <p className={testschedulecss.nowweather}>기능사 시험 일정은</p>
           <hr></hr>
           <button
-            className={weathercss.bnts}
+            className={testschedulecss.bnts}
             onClick={() => {
               setRownum(0);
             }}
@@ -55,7 +55,7 @@ const TestSchedule = () => {
             1회
           </button>
           <button
-            className={weathercss.bnts}
+            className={testschedulecss.bnts}
             onClick={() => {
               setRownum(2);
             }}
@@ -63,7 +63,7 @@ const TestSchedule = () => {
             2회
           </button>
           <button
-            className={weathercss.bnts}
+            className={testschedulecss.bnts}
             onClick={() => {
               setRownum(3);
             }}
@@ -71,7 +71,7 @@ const TestSchedule = () => {
             3회
           </button>
           <button
-            className={weathercss.bnts}
+            className={testschedulecss.bnts}
             onClick={() => {
               setRownum(4);
             }}
@@ -79,7 +79,7 @@ const TestSchedule = () => {
             4회
           </button>
           <div style={{ fontSize: "0.8rem", marginLeft: "0%" }}>
-            <p>{testnum.substring(12,22)}</p>
+            <p>{testnum.substring(12, 22)}</p>
             <p>
               필기 신청일 : {testdata.docRegStartDt}~{testdata.docRegEndDt}
             </p>
@@ -96,10 +96,10 @@ const TestSchedule = () => {
             <p>합격자 발표일 : {testdata.pracPassDt}</p>
           </div>
         </div>
-        <Link to={`/academiccalendar`} className={weathercss.backbutton}>
+        <Link to={`/academiccalendar`} className={testschedulecss.backbutton}>
           {"<"}
         </Link>
-        <Link to={`/hangang`} className={weathercss.prebutton}>
+        <Link to={`/hangang`} className={testschedulecss.prebutton}>
           {">"}
         </Link>
       </div>
