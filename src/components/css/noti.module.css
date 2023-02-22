@@ -70,14 +70,24 @@ body {
   font-weight: 700;
   margin-left: 2%;
 }
-.incontainer button:focus{
+.incontainer .button:focus{
   outline: none;
   border: none;
 }
-.incontainer button:hover{
+.incontainer .button:hover{
   font-size: 1.4rem;
   color: #f3470e;
 }
+.incontainer .bnts:focus{
+  outline: none;
+  border: none;
+}
+.incontainer .bnts:hover{
+  font-size: 1.4rem;
+  color: rgb(248, 238, 97);
+}
+
+
 .incontainer .prebutton{
   position: fixed;
   color: #fff;

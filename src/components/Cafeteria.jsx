@@ -57,6 +57,7 @@ const Cafeteria = () => {
           <p className={cafe.nowweather}>오늘 급식은</p>
           <hr></hr>
           <button
+            className={cafe.button}
             onClick={() => {
               setRownum(0);
             }}
@@ -64,6 +65,7 @@ const Cafeteria = () => {
             조식
           </button>
           <button
+            className={cafe.button}
             onClick={() => {
               setRownum(1);
             }}
@@ -71,6 +73,7 @@ const Cafeteria = () => {
             중식
           </button>
           <button
+            className={cafe.button}
             onClick={() => {
               setRownum(2);
             }}
