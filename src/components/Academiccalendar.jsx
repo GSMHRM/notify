@@ -26,6 +26,8 @@ const Academiccalendar = () => {
     axios.get(URL).then((res) => {
       console.log(res.data.SchoolSchedule[1].row);
       setData(res.data.SchoolSchedule[1].row);
+    }).catch((err)=>{
+      setData("학사일정이 등록되지않았거나 없습니다.");
     });
   }, []);
 
