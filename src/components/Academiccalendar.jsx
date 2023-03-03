@@ -24,13 +24,16 @@ const Academiccalendar = () => {
   const [message, setmessage] = useState(false);
 
   useEffect(() => {
-    axios.get(URL).then((res) => {
-      console.log(res.data.SchoolSchedule[1]);
-      setData(res.data.SchoolSchedule[1].row);
-      setmessage(true);
-    }).catch((err)=>{
-      setmessage(false);
-    });
+    axios
+      .get(URL)
+      .then((res) => {
+        console.log(res.data.SchoolSchedule[1]);
+        setData(res.data.SchoolSchedule[1].row);
+        setmessage(true);
+      })
+      .catch((err) => {
+        setmessage(false);
+      });
   }, []);
 
   return (
@@ -49,11 +52,23 @@ const Academiccalendar = () => {
         <div className={styles.main}>
           <p className={styles.now__dust}>이번달 학사 일정은</p>
           <hr />
-          {message?data.map((eventnm, index) => (
-            <p key={index} style={{ fontSize: "0.6rem", float:"left",margin:"1.6%", marginLeft:"3%" }}>
-              {eventnm.EVENT_NM} ({eventnm.AA_YMD})
-            </p>
-          )): <p style={{fontSize:"1rem"}}>일정이 없습니다.</p>}
+          {message ? (
+            data.map((eventnm, index) => (
+              <p
+                key={index}
+                style={{
+                  fontSize: "0.6rem",
+                  float: "left",
+                  margin: "1.6%",
+                  marginLeft: "3%",
+                }}
+              >
+                {eventnm.EVENT_NM} ({eventnm.AA_YMD})
+              </p>
+            ))
+          ) : (
+            <p style={{ fontSize: "1rem" }}>일정이 없습니다.</p>
+          )}
         </div>
         <Link to={`/testschedule`} className={styles.prebutton}>
           {">"}
