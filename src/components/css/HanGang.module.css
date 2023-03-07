@@ -9,7 +9,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  filter: brightness(80%); 
+  filter: brightness(80%);
 }
 .container {
   position: absolute;
@@ -79,4 +79,92 @@ body {
   text-decoration: none;
   left: -4%;
   bottom: 52.3%;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    position: absolute;
+    width: 65%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+  }
+  .incontainer {
+    position: absolute;
+    color: #fff;
+    width: 60%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .incontainer p {
+    margin: 10px;
+    font-weight: 700;
+  }
+
+  .incontainer .day {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .incontainer .main {
+    margin-top: 25%;
+    margin-left: 3%;
+  }
+
+  .incontainer .main .nowweather {
+    font-size: 1rem;
+  }
+
+  .incontainer .main hr {
+    width: 90%;
+    border: 0px;
+    height: 1px;
+    background-color: #fff;
+  }
+  .incontainer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 1%;
+  }
+  .incontainer .button:focus {
+    outline: none;
+    border: none;
+  }
+  .incontainer .button:hover {
+    font-size: 1rem;
+    color: #f3470e;
+  }
+  .incontainer .bnts:focus {
+    outline: none;
+    border: none;
+  }
+  .incontainer .bnts:hover {
+    font-size: 1.4rem;
+    color: rgb(248, 238, 97);
+  }
+
+  .incontainer .prebutton {
+    position: fixed;
+    color: #fff;
+    text-decoration: none;
+    left: 98%;
+    bottom: 52.3%;
+  }
+  .incontainer .backbutton {
+    position: fixed;
+    color: #fff;
+    text-decoration: none;
+    left: -4%;
+    bottom: 52.3%;
+  }
 }

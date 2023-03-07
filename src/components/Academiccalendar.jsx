@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Background from "./img/academic.jpg";
-import styles from "./css/fidust.module.css";
+import styles from "./css/noti.module.css";
 import { Link } from "react-router-dom";
 
 let today = new Date();
@@ -39,10 +39,10 @@ const Academiccalendar = () => {
   return (
     <>
       <img src={Background} alt="책" className={styles.back__img} />
-      <div className={styles.img__container}>
+      <div className={styles.container}>
         <img src={Background} alt="책" className={styles.img} />
       </div>
-      <div className={styles.in__container}>
+      <div className={styles.incontainer}>
         <div>
           <p>
             {year}년 {month}월 {date}일
@@ -50,7 +50,7 @@ const Academiccalendar = () => {
           <p className={styles.day}>{dayName}요일</p>
         </div>
         <div className={styles.main}>
-          <p className={styles.now__dust}>이번달 학사 일정은</p>
+          <p className={styles.nowweather}>이번달 학사 일정은</p>
           <hr />
           {message ? (
             data.map((eventnm, index) => (
