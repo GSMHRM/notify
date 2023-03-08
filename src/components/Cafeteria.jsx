@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import cafe from "./css/noti.module.css";
 import cafeteriaimg from "./img/cafeteria.jpg";
@@ -11,6 +11,12 @@ let date = ("0" + today.getDate()).slice(-2);
 let week = new Array("일", "월", "화", "수", "목", "금", "토");
 let day = today.getDay(); // 요일
 let dayName = week[today.getDay()];
+let hour = today.getHours();
+
+if (hour >= 19) {
+  date = ("0" + (today.getDate() + 1)).slice(-2);
+}
+
 
 const API_KEY = process.env.REACT_APP_NEIS;
 const ATPT_OFCDC_SC_CODE = process.env.REACT_APP_SCCODE;
@@ -29,15 +35,17 @@ const Cafeteria = () => {
       .then((res) => {
         console.log(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
         setEat(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
+
+
       })
       .catch((err) => {
         setEat("급식이 없어요");
       });
   }, [rownum]);
 
-  const replaceWithBr = () => {
+  const replaceWithBr = useCallback(()=>{
     return eat.replace(/[0-9,.()]/g, "");
-  };
+  },[eat]);
 
   return (
     <>
@@ -61,28 +69,27 @@ const Cafeteria = () => {
             className={cafe.button}
             onClick={() => {
               setRownum(0);
-              setCafeday("조식");
+              setCafeday("아침");
             }}
           >
-            조식
-          </button>
+            아침          </button>
           <button
             className={cafe.button}
             onClick={() => {
               setRownum(1);
-              setCafeday("중식");
+              setCafeday("점심");
             }}
           >
-            중식
+            점심
           </button>
           <button
             className={cafe.button}
             onClick={() => {
               setRownum(2);
-              setCafeday("석식");
+              setCafeday("저녁");
             }}
           >
-            석식
+            저녁
           </button>
           <p
             style={{ fontSize: "1rem" }}
