@@ -3,11 +3,11 @@ body {
   background-color: #d9d9d9;
   font-family: "Inter", sans-serif;
 }
-.back__img{
+.back__img {
   width: 100vw;
   height: 100vh;
   z-index: 0;
-  filter: brightness(80%); 
+  filter: brightness(80%);
 }
 .container {
   position: absolute;
@@ -46,22 +46,22 @@ body {
   font-weight: 600;
 }
 
-.incontainer .main{
+.incontainer .main {
   margin-top: 30%;
   margin-left: 3%;
 }
 
-.incontainer .main .nowweather{
+.incontainer .main .nowweather {
   font-size: 1.3rem;
 }
 
-.incontainer .main hr{
+.incontainer .main hr {
   width: 93%;
   border: 0px;
   height: 1px;
   background-color: #fff;
 }
-.incontainer button{
+.incontainer button {
   background: none;
   border: none;
   cursor: pointer;
@@ -70,44 +70,68 @@ body {
   font-weight: 700;
   margin-left: 2%;
 }
-.incontainer .button:focus{
+.incontainer .button:focus {
   outline: none;
   border: none;
 }
-.incontainer .button:hover{
+.incontainer .button:hover {
   font-size: 1.4rem;
   color: #f3470e;
 }
-.incontainer .bnts:focus{
+.incontainer .bnts:focus {
   outline: none;
   border: none;
 }
-.incontainer .bnts:hover{
+.incontainer .bnts:hover {
   font-size: 1.4rem;
   color: rgb(248, 238, 97);
 }
 
-
-.incontainer .prebutton{
+.incontainer .prebutton {
   position: fixed;
   color: #fff;
   text-decoration: none;
   left: 98%;
   bottom: 52.3%;
 }
-.incontainer .backbutton{
+.incontainer .backbutton {
   position: fixed;
   color: #fff;
   text-decoration: none;
-  left:-4%;
+  left: -4%;
   bottom: 52.3%;
 }
-@media screen and (max-width:768px){
-  .back__img{
+
+.incontainer .nextcafe {
+  position: fixed;
+  font-weight: 700;
+  font-size: 1.3rem;
+  cursor: pointer;
+  left: 55%;
+  bottom: 51%;
+}
+.incontainer .precafe {
+  position: fixed;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  left: -3%;
+  bottom: 51%;
+}
+.incontainer .precafe:hover {
+  font-size: 1.5rem;
+  color: #f3470e;
+}
+.incontainer .nextcafe:hover {
+  font-size: 1.5rem;
+  color: #f3470e;
+}
+@media screen and (max-width: 768px) {
+  .back__img {
     width: 100vw;
     height: 100vh;
     z-index: 0;
-    filter: brightness(80%); 
+    filter: brightness(80%);
   }
   .container {
     position: absolute;
@@ -129,33 +153,33 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
   }
-  
+
   .incontainer p {
     margin: 10px;
     font-weight: 700;
   }
-  
+
   .incontainer .day {
     font-size: 1rem;
     font-weight: 600;
   }
-  
-  .incontainer .main{
+
+  .incontainer .main {
     margin-top: 25%;
     margin-left: 3%;
   }
-  
-  .incontainer .main .nowweather{
+
+  .incontainer .main .nowweather {
     font-size: 1rem;
   }
-  
-  .incontainer .main hr{
+
+  .incontainer .main hr {
     width: 90%;
     border: 0px;
     height: 1px;
     background-color: #fff;
   }
-  .incontainer button{
+  .incontainer button {
     background: none;
     border: none;
     cursor: pointer;
@@ -164,36 +188,59 @@ body {
     font-weight: 700;
     margin-left: 1%;
   }
-  .incontainer .button:focus{
+  .incontainer .button:focus {
     outline: none;
     border: none;
   }
-  .incontainer .button:hover{
+  .incontainer .button:hover {
     font-size: 1rem;
     color: #f3470e;
   }
-  .incontainer .bnts:focus{
+  .incontainer .bnts:focus {
     outline: none;
     border: none;
   }
-  .incontainer .bnts:hover{
+  .incontainer .bnts:hover {
     font-size: 1.4rem;
     color: rgb(248, 238, 97);
   }
-  
-  
-  .incontainer .prebutton{
+
+  .incontainer .prebutton {
     position: fixed;
     color: #fff;
     text-decoration: none;
     left: 98%;
     bottom: 52.3%;
   }
-  .incontainer .backbutton{
+  .incontainer .backbutton {
     position: fixed;
     color: #fff;
     text-decoration: none;
-    left:-4%;
+    left: -4%;
     bottom: 52.3%;
+  }
+  .incontainer .nextcafe {
+    position: fixed;
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    left: 48%;
+    bottom: 48%;
+  }
+  .incontainer .precafe {
+    position: fixed;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    left: -3%;
+    bottom: 48%;
+  }
+  .incontainer .precafe:focus {
+    outline: none;
+    border: none;
+  }
+  .incontainer .nextcafe:hover {
+    font-size: 1rem;
+    color: #f3470e;
   }
 }

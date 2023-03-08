@@ -11,11 +11,7 @@ let date = ("0" + today.getDate()).slice(-2);
 let week = new Array("일", "월", "화", "수", "목", "금", "토");
 let day = today.getDay(); // 요일
 let dayName = week[today.getDay()];
-let hour = today.getHours();
 
-if (hour >= 19) {
-  date = ("0" + (today.getDate() + 1)).slice(-2);
-}
 
 
 const API_KEY = process.env.REACT_APP_NEIS;
@@ -35,17 +31,15 @@ const Cafeteria = () => {
       .then((res) => {
         console.log(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
         setEat(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
-
-
       })
       .catch((err) => {
         setEat("급식이 없어요");
       });
   }, [rownum]);
 
-  const replaceWithBr = useCallback(()=>{
+  const replaceWithBr = useCallback(() => {
     return eat.replace(/[0-9,.()]/g, "");
-  },[eat]);
+  }, [eat]);
 
   return (
     <>
@@ -72,7 +66,8 @@ const Cafeteria = () => {
               setCafeday("아침");
             }}
           >
-            아침          </button>
+            아침
+          </button>
           <button
             className={cafe.button}
             onClick={() => {
@@ -96,6 +91,7 @@ const Cafeteria = () => {
             dangerouslySetInnerHTML={{ __html: replaceWithBr() }}
           />
         </div>
+        
         <Link to={`/academiccalendar`} className={cafe.prebutton}>
           {">"}
         </Link>
