@@ -77,6 +77,12 @@ body {
   bottom: 52.3%;
 }
 @media screen and (max-width:768px){
+  .back__img{
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    filter: brightness(80%); 
+  }
   .img__container {
     position: absolute;
     width: 65%;
