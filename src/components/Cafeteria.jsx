@@ -21,6 +21,7 @@ const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type
 const Cafeteria = () => {
   const [eat, setEat] = useState("");
   const [rownum, setRownum] = useState(0);
+  const [cafeday, setCafeday] = useState("아침");
 
   useEffect(() => {
     axios
@@ -54,12 +55,13 @@ const Cafeteria = () => {
         </div>
 
         <div className={cafe.main}>
-          <p className={cafe.nowweather}>오늘 급식은</p>
+          <p className={cafe.nowweather}>오늘 {cafeday}은</p>
           <hr></hr>
           <button
             className={cafe.button}
             onClick={() => {
               setRownum(0);
+              setCafeday("조식");
             }}
           >
             조식
@@ -68,6 +70,7 @@ const Cafeteria = () => {
             className={cafe.button}
             onClick={() => {
               setRownum(1);
+              setCafeday("중식");
             }}
           >
             중식
@@ -76,6 +79,7 @@ const Cafeteria = () => {
             className={cafe.button}
             onClick={() => {
               setRownum(2);
+              setCafeday("석식");
             }}
           >
             석식
