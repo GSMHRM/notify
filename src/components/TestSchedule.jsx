@@ -65,7 +65,7 @@ const TestSchedule = () => {
           <button
             className={testschedulecss.bnts}
             onClick={() => {
-              setRownum(3);
+              setRownum(4);
             }}
           >
             3회
@@ -73,7 +73,7 @@ const TestSchedule = () => {
           <button
             className={testschedulecss.bnts}
             onClick={() => {
-              setRownum(4);
+              setRownum(5);
             }}
           >
             4회
