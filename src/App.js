@@ -1,26 +1,33 @@
-import Cafeteria from "./components/Cafeteria";
-import Weather from "./components/Weather";
-import FiDust from "./components/FiDust";
-import HanGang from "./components/HanGang";
-import React from "react";
-import styled from "styled-components";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Routes } from "react-router";
-import Academiccalendar from "./components/Academiccalendar";
-import TestSchedule from "./components/TestSchedule";
+import axios from "axios";    
 
 function App() {
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+
+    const email = e.target.email.value;
+    const name = e.target.name.value;
+    const password = e.target.password.value;
+
+    axios
+      .post(`/auth/signup`, { email, name, password }, { withCredentials: true })
+      .then((res) => {
+        console.log(res.data);
+        alert("성공");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("실패");
+      });
+  };
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Cafeteria />} />
-        <Route path="/academiccalendar" element={<Academiccalendar />} />
-        <Route path="testschedule" element={<TestSchedule/>} />
-        <Route path="/hangang" element={<HanGang />} />
-        <Route path="/finedust" element={<FiDust />} />
-        <Route path="/weather" element={<Weather />} />
-      </Routes>
-    </Router>
+    <div className="App">
+      <form onSubmit={onSubmitHandler}>
+        <input name="email" type="email" placeholder="이메일" />
+        <input name="name" placeholder="이름" />
+        <input name="password" placeholder="비밀번호" />
+        <input type="submit" value="제출" />
+      </form>
+    </div>
   );
 }
 
