@@ -9,7 +9,7 @@ function App() {
     const password = e.target.password.value;
 
     axios
-      .post(`/auth/signup`, { email, name, password }, { withCredentials: true })
+      .post(`http://ec2-3-35-231-181.ap-northeast-2.compute.amazonaws.com:9020/auth/signup`, { email, name, password }, { withCredentials: true })
       .then((res) => {
         console.log(res.data);
         alert("성공");
