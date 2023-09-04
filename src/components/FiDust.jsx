@@ -30,7 +30,7 @@ function SmDust() {
 
   return (
     <div>
-      <img src={Background} alt="미세먼지" className={styles.back__img}/>
+      <img src={Background} alt="미세먼지" className={styles.back__img} />
       <div className={styles.img__container}>
         <img src={Background} alt="미세먼지" className={styles.img} />
       </div>
@@ -42,12 +42,16 @@ function SmDust() {
           <p className={styles.day}>{dayName}요일</p>
         </div>
         <div className={styles.main}>
-          <p className={styles.now__dust}>오늘 미세먼지(pm10) 농도는</p>
+          <p className={styles.now__dust}>광주 미세먼지(pm10) 농도는</p>
           <hr />
           <p>{data}㎍/㎥</p>
         </div>
-        <Link to={`/weather`} className={styles.prebutton}>{">"}</Link>
-        <Link to={`/hangang`} className={styles.backbutton}>{"<"}</Link>
+        <Link to={`/weather`} className={styles.prebutton}>
+          {">"}
+        </Link>
+        <Link to={`/hangang`} className={styles.backbutton}>
+          {"<"}
+        </Link>
       </div>
     </div>
   );

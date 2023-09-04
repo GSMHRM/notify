@@ -10,10 +10,8 @@ export default function HanGang() {
   let month = today.getMonth() + 1; // 월
   let date = today.getDate(); // 날짜
   let week = new Array("일", "월", "화", "수", "목", "금", "토");
-  let day = today.getDay(); // 요일
   let dayName = week[today.getDay()];
 
-  let time = "";
   const [hangang, setHangang] = useState([{ time: "00:00", temp: "0.0" }]);
   const API_KEY = process.env.REACT_APP_HANGANG;
   const URL = `https://api.qwer.pw/request/hangang_temp?apikey=${API_KEY}`;
@@ -27,7 +25,7 @@ export default function HanGang() {
 
   return (
     <>
-    <img src={Background} alt="한강" className={Hangang.back__img}/>
+      <img src={Background} alt="한강" className={Hangang.back__img} />
       <div className={Hangang.container}>
         <img src={Background} alt="한강" className={Hangang.img} />
       </div>
