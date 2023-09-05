@@ -51,6 +51,11 @@ body {
   margin-left: 3%;
 }
 
+.incontainer .cafeteriamain {
+  margin-top: 10%;
+  margin-left: 3%;
+}
+
 .incontainer .main .nowweather {
   font-size: 1.3rem;
 }
