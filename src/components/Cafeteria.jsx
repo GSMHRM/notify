@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import cafe from "./css/noti.module.css";
 import cafeteriaimg from "./img/cafeteria.jpg";
@@ -12,8 +12,6 @@ let week = new Array("일", "월", "화", "수", "목", "금", "토");
 let day = today.getDay(); // 요일
 let dayName = week[today.getDay()];
 
-
-
 const API_KEY = process.env.REACT_APP_NEIS;
 const ATPT_OFCDC_SC_CODE = process.env.REACT_APP_SCCODE;
 const SD_SCHUL_CODE = process.env.REACT_APP_SDCODE;
@@ -22,6 +20,7 @@ let TODAY = year + month + date;
 const URL = `https://open.neis.go.kr/hub/mealServiceDietInfo?KEY=${API_KEY}&Type=json&pIndex=1&pSize=10&ATPT_OFCDC_SC_CODE=${ATPT_OFCDC_SC_CODE}&SD_SCHUL_CODE=${SD_SCHUL_CODE}&MLSV_YMD=${TODAY}`;
 const Cafeteria = () => {
   const [eat, setEat] = useState("");
+  const [info, setInfo] = useState("");
   const [rownum, setRownum] = useState(0);
   const [cafeday, setCafeday] = useState("아침");
 
@@ -29,7 +28,7 @@ const Cafeteria = () => {
     axios
       .get(URL)
       .then((res) => {
-        console.log(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
+        setInfo(res.data.mealServiceDietInfo[1].row[rownum].NTR_INFO);
         setEat(res.data.mealServiceDietInfo[1].row[rownum].DDISH_NM);
       })
       .catch((err) => {
@@ -40,6 +39,10 @@ const Cafeteria = () => {
   const replaceWithBr = useCallback(() => {
     return eat.replace(/[0-9,.()]/g, "");
   }, [eat]);
+
+  const replaceWithBrInfo = useCallback(() => {
+    return info.replace(/[,()]/g, "");
+  }, [info]);
 
   return (
     <>
@@ -90,8 +93,12 @@ const Cafeteria = () => {
             style={{ fontSize: "1rem" }}
             dangerouslySetInnerHTML={{ __html: replaceWithBr() }}
           />
+          <p
+            style={{ fontSize: "0.6rem" }}
+            dangerouslySetInnerHTML={{ __html: replaceWithBrInfo() }}
+          />
         </div>
-        
+
         <Link to={`/academiccalendar`} className={cafe.prebutton}>
           {">"}
         </Link>
