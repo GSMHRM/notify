@@ -97,7 +97,7 @@ const Cafeteria = () => {
         </div>
 
         <div className={cafe.cafeteriamain}>
-          <p className={cafe.nowweather}>오늘 {cafeday}은</p>
+          <p className={cafe.nowweather}>{cafeday} 급식</p>
           <hr />
           <button
             className={cafe.button}
